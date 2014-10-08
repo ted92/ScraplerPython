@@ -59,7 +59,7 @@ Example of HTML div:
 How to get information with BeautifulSoup4:
   item.find("h2", {"class":"rgs"}).text
   item.find("span", {"class":"street-address"}).text + " " + item.find("span", {"class":"locality"}).text
-  telephone[i] = item.find("div", {"class":"tel"}).text
+  item.find("div", {"class":"tel"}).text
   
 How to manage information of the db with sqlite3:
   db = sqlite3.connect(name_db)
