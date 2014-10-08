@@ -20,7 +20,7 @@ cursor.execute("""CREATE TABLE IF NOT EXISTS PagineGialle
      (id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE NOT NULL,
      name TEXT NOT NULL,
      address TEXT,
-     tel  TEXT)""" )    #create a new table only if it doesnt exists yet
+     tel  TEXT)""" )    #create a new table PagineGialle only if it doesnt exists yet
 db.commit()
 
 
@@ -43,8 +43,8 @@ for item in g_data:
     address[i] = item.find("span", {"class":"street-address"}).text + " " + item.find("span", {"class":"locality"}).text
     telephone[i] = item.find("div", {"class":"tel"}).text
     
-    cursor.execute("""INSERT INTO PagineGialle (name, address, tel) VALUES
-                  (?, ?, ?)""", (name[i], address[i], telephone[i]) )
+    cursor.execute("""INSERT INTO PagineGialle (name, address, tel) VALUES 
+                         (?, ?, ?)""", (name[i], address[i], telephone[i]) )      #pushing data into DB
     
     db.commit()
     
