@@ -12,6 +12,8 @@ Class: Scrapler.py
 
 Used library BeautifulSoup4
 
+Used sqlite3 library for the DataBase
+
 v0.1
   from one page PagineGialle the code prints the name of the society with the relative address
   TODO:
@@ -19,7 +21,49 @@ v0.1
     -add telephone number and website
     -add all information into a MySQLdb
   
+v0.2 (09/ott/2014)
+  The Scrapler creates a DB with name, address and number. Used sqlite3 library since is easy and intuitive, to create my DB
+  TODO:
+    -implement a stack for the webpages already scrapled
+    -add the functionality to let the scrapler navigates into the web pages automatically
 
 
 Used mainly the official BeautifulSoup4 guide here: http://www.crummy.com/software/BeautifulSoup/bs4/doc/#kinds-of-objects
 but also some tutorial on youtube and some advices on StackOverflow.
+
+
+Example of HTML div:
+
+**this is a HTML code translated in a soup object**
+
+<div class="item_sx">
+<div class="item_head">
+<span class="numero">A.</span>
+<div class="org fn">
+<h2 class="rgs">
+<a class="_lms _noc" href="http://www.paginegialle.it/blindoserrfabbro" redshpriority="1" title="Scheda Azienda BLINDOSERR FABBRO A.A. ABI BLINDOSERR di DE PASCALI MARCELLO">BLINDOSERR FABBRO</a>
+</h2>
+<span class="insegna">A.A. ABI BLINDOSERR di DE PASCALI MARCELLO</span>
+</div>
+</div>
+<div class="address">
+<span class="street-address">109/C, V. De Sanctis</span> - <span class="locality">10142 Torino (TO)</span>
+<span class="piper"> | </span>
+<a class="map-address-link" href="http://www.paginegialle.it/blindoserrfabbro">mappa</a>
+<div class="tel" data-rainbow="rainbowbase">
+<span class="type"> tel:</span>
+<span class="value">011 3112322</span>
+</div>
+</div>
+
+How to get information with BeautifulSoup4:
+  item.find("h2", {"class":"rgs"}).text
+  item.find("span", {"class":"street-address"}).text + " " + item.find("span", {"class":"locality"}).text
+  telephone[i] = item.find("div", {"class":"tel"}).text
+  
+How to manage information of the db with sqlite3:
+  db = sqlite3.connect(name_db)
+  cursor = db.cursor()
+  cursor.execute('SQL QUERY')
+  db.commit()
+  db.close()
