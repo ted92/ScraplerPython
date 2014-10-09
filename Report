@@ -26,6 +26,7 @@ v0.2 (09/ott/2014)
   TODO:
     -implement a stack for the webpages already scrapled
     -add the functionality to let the scrapler navigates into the web pages automatically
+    -add check if does exist the field 'text' in the tags
 
 
 Used mainly the official BeautifulSoup4 guide here: http://www.crummy.com/software/BeautifulSoup/bs4/doc/#kinds-of-objects
