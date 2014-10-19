@@ -31,11 +31,17 @@ v0.2 (09/ott/2014)
 
 v0.3 (12/ott/2014)
   The Scrapler now is able to add even the links without any telephone number or address (they could also be deleted).
-  The Scrapler moove now between 5 pages and gets all the informations related.
+  The Scrapler mooves now between 5 pages and gets all the informations related.
   TODO:
     -implement a stack for the webpages already scrapled (the pages are taken 2 times)
     -add website
     -scraple more than the 5 initial pages
+    
+v0.9 (19/ott/2014)
+  Implemented a stack for the pages already visited.
+  The Scrapler now is able to moove through all the PagineGialle.it pages
+  TODO:
+    -add website field
   
 Used mainly the official BeautifulSoup4 guide here: http://www.crummy.com/software/BeautifulSoup/bs4/doc/#kinds-of-objects
 but also some tutorial on youtube and some advices on StackOverflow.
@@ -76,3 +82,45 @@ How to manage information of the db with sqlite3:
   cursor.execute('SQL QUERY')
   db.commit()
   db.close()
+  
+To get a fast access to DB I use the plug-in SQLite-Manager in Firefox. The DB is created in the default folder inside the Project.
+Example of DB:
+
+"1","
+BLINDOSERR FABBRO
+","109/C, V. De Sanctis 10142 Torino (TO)","
+ tel:
+011 3112322
+"
+"2","
+ARTIGIANI DI MILANO
+","60, Vl. Bligny 20136 Milano (MI)","
+ tel:
+02 58304860
+"
+"3","
+ART ASSOCIATI soc. coop.
+","33, V. De Sanctis 20141 Milano (MI)","
+ tel:
+02 36687038,331 6528365
+ fax:
+02 36687024
+"
+"4","
+MISTER SERVICE
+","6, Vl. Pisa 20146 Milano (MI)","
+ tel:
+02 39541980
+"
+"5","
+AZIENDA ECOLOGICA SI.MO. SPURGHI
+","67, V. Socrate 20128 Milano (MI)","
+ tel:
+02 25712684
+"
+"6","
+CORALLUZZO PRONTO INTERVENTO
+","C. Vercelli 20144 Milano (MI)","
+ tel:
+389 2929299,389 6064341
+"
