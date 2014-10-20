@@ -8,7 +8,7 @@ Created on 07/ott/2014
 
 Web Scraper on PagineGialle.it
 
-Class: Scrapler.py
+Class: Scraper.py
 
 Parsed with BeautifulSoup4
 
