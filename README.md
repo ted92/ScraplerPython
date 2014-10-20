@@ -1,4 +1,4 @@
-ScraplerPython
+ScraperPython
 ==============
 '''
 Created on 07/ott/2014
@@ -6,7 +6,7 @@ Created on 07/ott/2014
 @author: Enrico Tedeschi
 '''
 
-Web Scrapler on PagineGialle.it
+Web Scraper on PagineGialle.it
 
 Class: Scrapler.py
 
