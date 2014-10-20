@@ -8,7 +8,7 @@ Created on 07/ott/2014
 
 Web Scrapler on PagineGialle.it
 
-Class: Scrapler.py
+Class: Scraper.py
 
 Used library BeautifulSoup4
 
@@ -30,16 +30,16 @@ v0.2 (09/ott/2014)
     -add website
 
 v0.3 (12/ott/2014)
-  The Scrapler now is able to add even the links without any telephone number or address (they could also be deleted).
-  The Scrapler mooves now between 5 pages and gets all the informations related.
+  The Scraper now is able to add even the links without any telephone number or address (they could also be deleted).
+  The Scraper mooves now between 5 pages and gets all the informations related.
   TODO:
     -implement a stack for the webpages already scrapled (the pages are taken 2 times)
     -add website
-    -scraple more than the 5 initial pages
+    -scrape more than the 5 initial pages
     
 v0.9 (19/ott/2014)
   Implemented a stack for the pages already visited.
-  The Scrapler now is able to moove through all the PagineGialle.it pages
+  The Scraper now is able to moove through all the PagineGialle.it pages
   TODO:
     -add website field
   
